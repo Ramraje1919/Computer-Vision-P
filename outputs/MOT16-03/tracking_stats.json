@@ -1,0 +1,26 @@
+{
+  "video_in": "C:\\Users\\sapka\\Desktop\\PROJECT\\data\\MOT16-03.mp4",
+  "video_out": "C:\\Users\\sapka\\Desktop\\PROJECT\\outputs\\MOT16-03\\MOT16-03_tracked.mp4",
+  "resolution": "960x540",
+  "fps": 15.0,
+  "total_frames": 1500,
+  "duration_seconds": 100.0,
+  "processing_time_s": 123.7,
+  "tracker_params": {
+    "conf_high": 0.5,
+    "conf_low": 0.1,
+    "match_thresh_stage1": 0.8,
+    "match_thresh_stage2": 0.45,
+    "track_buffer": 90
+  },
+  "unique_track_ids": 92,
+  "max_simultaneous_tracks": 21,
+  "total_detections": 32273,
+  "avg_dets_per_frame": 21.52,
+  "directional_counts": {
+    "in": 15,
+    "out": 28,
+    "total": 43
+  },
+  "generated_at": "2026-10-31T18:42:48.683518"
+}

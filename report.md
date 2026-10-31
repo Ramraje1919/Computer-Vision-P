@@ -327,3 +327,4 @@ See [`reports/failure_analysis.md`](reports/failure_analysis.md) for full case-b
 
 *Report compiled from Stages A–J of the MOT17 Multi-Object Tracking Project.*  
 *All experiments run locally on CPU — no GPU, no cloud, no data pushed to remote repositories.*
+
