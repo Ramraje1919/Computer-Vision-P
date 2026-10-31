@@ -306,3 +306,5 @@ homogeneous appearance. Use ByteTrack unless GPU inference is available.
 | [`reports/failure_analysis.md`](reports/failure_analysis.md) | Detailed failure mode analysis |
 | [`research/algorithm_comparison.md`](research/algorithm_comparison.md) | Algorithm literature review |
 | [`outputs/MOT16-03/tracking_report.md`](outputs/MOT16-03/tracking_report.md) | MOT16-03 demo report |
+#   C o m p u t e r - V i s i o n - P  
+ 
