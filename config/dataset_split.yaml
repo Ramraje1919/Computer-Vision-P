@@ -1,0 +1,96 @@
+# MOT17 Dataset Sequence-Level Split Configuration
+# Strict Rules:
+# 1. Sequences are split at the sequence level, never by random frames.
+# 2. All detector variants (DPM, FRCNN, SDP) of a sequence reside in the same split.
+# 3. Validation sequences are used for hyperparameter tuning.
+# 4. Held-out sequences are evaluated strictly after tuning is frozen.
+# 5. MOT16-03.mp4 is strictly excluded from all splits and quantitative metrics.
+
+metadata:
+  dataset: "MOT17"
+  total_unique_train_sequences: 7
+  total_unique_test_sequences: 7
+  variants_per_sequence: ["DPM", "FRCNN", "SDP"]
+  evaluation_class: 1 # Pedestrian only
+  evaluation_iou_threshold: 0.50
+
+splits:
+  validation:
+    description: "Tuning and validation split for hyperparameter optimization and baseline comparison"
+    unique_sequences:
+      - name: "MOT17-02"
+        camera: "Static"
+        resolution: "1920x1080"
+        frames: 600
+        fps: 30
+        gt_pedestrians: 18581
+        challenge: "Dense indoor concourse, heavy occlusion, crossing paths"
+      - name: "MOT17-05"
+        camera: "Moving"
+        resolution: "640x480"
+        frames: 837
+        fps: 14
+        gt_pedestrians: 6917
+        challenge: "Handheld camera motion, low resolution, motion blur"
+      - name: "MOT17-09"
+        camera: "Static"
+        resolution: "1920x1080"
+        frames: 525
+        fps: 30
+        gt_pedestrians: 5325
+        challenge: "Daytime outdoor, clean trajectories, baseline validation"
+    summary:
+      total_frames: 1962
+      total_pedestrians: 30823
+      frame_percentage: 36.9
+      annotation_percentage: 27.4
+
+  held_out:
+    description: "Held-out test split for unbiased final evaluation; zero parameter tuning allowed"
+    unique_sequences:
+      - name: "MOT17-04"
+        camera: "Static"
+        resolution: "1920x1080"
+        frames: 1050
+        fps: 30
+        gt_pedestrians: 47557
+        challenge: "Massive night crowd, small pedestrians, extreme density"
+      - name: "MOT17-10"
+        camera: "Moving"
+        resolution: "1920x1080"
+        frames: 654
+        fps: 30
+        gt_pedestrians: 12839
+        challenge: "Night outdoor street, moving camera, crossing pedestrians"
+      - name: "MOT17-11"
+        camera: "Moving"
+        resolution: "1920x1080"
+        frames: 900
+        fps: 30
+        gt_pedestrians: 9436
+        challenge: "Indoor mall moving camera, long-term identity maintenance"
+      - name: "MOT17-13"
+        camera: "Moving"
+        resolution: "1920x1080"
+        frames: 750
+        fps: 25
+        gt_pedestrians: 11642
+        challenge: "Moving bus perspective, traffic occluders, variable scale"
+    summary:
+      total_frames: 3354
+      total_pedestrians: 81474
+      frame_percentage: 63.1
+      annotation_percentage: 72.6
+
+  test_official:
+    description: "Official MOT17 test set sequences (detections provided, ground truth is private/unreleased)"
+    sequences:
+      - "MOT17-01"
+      - "MOT17-03"
+      - "MOT17-06"
+      - "MOT17-07"
+      - "MOT17-08"
+      - "MOT17-12"
+      - "MOT17-14"
+    note: "Not used for quantitative MOTA/IDF1 scoring since public ground truth is unavailable."
+

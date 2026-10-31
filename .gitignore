@@ -1,0 +1,33 @@
+# ── Dataset (5.9 GB — download from https://motchallenge.net/data/MOT17/) ──
+data/
+
+# ── Model weights (auto-downloadable from official sources) ──
+weights/
+yolo11n.pt
+
+# ── Regeneratable cached outputs ──
+outputs/detections_cache/
+outputs/predictions/
+outputs/MOT16-03/test_10frames.mp4
+
+# ── Python build artifacts ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# ── Assignment PDF (don't submit it back) ──
+CV_Interview_Round2_Problem_Statement*.pdf
+
+# ── OS / IDE files ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

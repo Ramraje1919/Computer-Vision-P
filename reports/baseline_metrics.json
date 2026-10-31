@@ -1,0 +1,81 @@
+{
+  "sequence": "MOT17-02-FRCNN",
+  "dataset": "MOT17",
+  "split": "train",
+  "frames_evaluated": 600,
+  "ground_truth_objects": 18581,
+  "detector": {
+    "model": "YOLO11n (pretrained on COCO)",
+    "weights_file": "yolo11n.pt",
+    "confidence_threshold": 0.20,
+    "image_size": 960,
+    "target_classes": [0],
+    "total_predictions": 9611
+  },
+  "evaluator": {
+    "framework": "motmetrics 1.4.0 (MOTChallenge standard accumulator)",
+    "match_iou_threshold": 0.50
+  },
+  "baseline_models": {
+    "Baseline_IoU_Hungarian": {
+      "tracker_file": "tracker_baseline.py",
+      "motion_model": "None (Constant bounding-box position)",
+      "appearance_model": "None",
+      "iou_threshold": 0.20,
+      "max_missed_frames": 15,
+      "metrics": {
+        "mota": 0.199343,
+        "mota_percent": 19.93,
+        "idf1": 0.303419,
+        "idf1_percent": 30.34,
+        "idp": 0.445011,
+        "idp_percent": 44.50,
+        "idr": 0.230181,
+        "idr_percent": 23.02,
+        "num_matches": 6549,
+        "num_misses": 11815,
+        "num_false_positives": 2845,
+        "num_switches": 217
+      }
+    },
+    "Previous_Extended_Run": {
+      "note": "Documented previous run on wider hyperparameter / video settings",
+      "metrics": {
+        "mota_percent": 30.92,
+        "idf1_percent": 28.67,
+        "num_switches": 332
+      }
+    },
+    "Improved_Kalman_Hungarian": {
+      "tracker_file": "tracker.py",
+      "motion_model": "OpenCV cv2.KalmanFilter (8-state: cx, cy, w, h, vx, vy, vw, vh)",
+      "appearance_model": "None (Motion-distance heuristic)",
+      "iou_threshold": 0.10,
+      "max_missed_frames": 90,
+      "max_center_distance": 150,
+      "recovery_distance": 200,
+      "metrics": {
+        "mota": 0.197460,
+        "mota_percent": 19.75,
+        "idf1": 0.267523,
+        "idf1_percent": 26.75,
+        "idp": 0.392363,
+        "idp_percent": 39.24,
+        "idr": 0.202949,
+        "idr_percent": 20.29,
+        "num_matches": 6520,
+        "num_misses": 11821,
+        "num_false_positives": 2851,
+        "num_switches": 240
+      }
+    }
+  },
+  "diagnostics": {
+    "detection_recall": 0.3524,
+    "detection_precision": 0.6814,
+    "miss_ratio": 0.6358,
+    "fp_ratio": 0.1531,
+    "idsw_per_100_frames": 36.17
+  }
+}
+

@@ -1,0 +1,81 @@
+# Global Master Configuration for MOT17 Multi-Object Tracking Pipeline
+
+project:
+  name: "High-Accuracy MOT17 Tracking System"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  data_root: "data/MOT17"
+  weights_dir: "weights"
+  output_dir: "outputs"
+  reports_dir: "reports"
+  detections_cache_dir: "outputs/detections_cache"
+  visualizations_dir: "outputs/visualizations"
+  osnet_weights: "weights/osnet_x0_25_msmt17_combineall_256x128_amsgrad_ep150_stp60_lr0.0015_b64_fb10_softmax_labelsmooth_flip_jitter.pth"
+  yolo_weights: "yolo11n.pt"
+
+detection:
+  model_type: "yolo" # options: "yolo", "public"
+  conf_high: 0.50 # High-confidence threshold for Stage 1 BYTE
+  conf_low: 0.10 # Low-confidence threshold for Stage 2 BYTE
+  img_size: 960 # Detection inference resolution
+  iou_nms: 0.70 # NMS threshold
+  person_class_id: 0 # COCO person class
+
+tracking:
+  tracker_type: "hybrid_reid" # options: "baseline", "bytetrack", "botsort", "hybrid_reid"
+  # Kalman Filter parameters
+  kalman:
+    state_format: "xywh" # BoT-SORT direct (cx, cy, w, h, vx, vy, vw, vh)
+    std_weight_position: 0.05
+    std_weight_velocity: 0.00625
+  
+  # Association parameters
+  association:
+    match_threshold_stage1: 0.80 # Max cost for Stage 1 match
+    match_threshold_stage2: 0.50 # Max cost for Stage 2 match (low-confidence boxes)
+    iou_distance_weight: 0.40 # Weight of IoU distance in cost matrix
+    appearance_distance_weight: 0.60 # Weight of cosine distance in cost matrix
+    spatial_gating_threshold: 300.0 # Pixel distance beyond which appearance is rejected
+  
+  # Track Life Cycle & Buffer
+  lifecycle:
+    track_buffer: 90 # Frames to keep lost tracks before expiration (3 seconds at 30 fps)
+    confirm_window: 2 # Consecutive detections required to confirm a new track
+    min_box_area: 100 # Minimum bounding box area in pixels to reject noise
+
+reid:
+  enabled: true
+  model_name: "osnet_x0_25"
+  embedding_dim: 512
+  crop_size: [256, 128] # [height, width]
+  appearance_threshold: 0.35 # Cosine distance threshold (1 - cos_sim <= 0.35)
+  gallery:
+    max_samples_per_track: 6 # Multi-sample exemplar memory
+    ema_momentum: 0.90 # Running average momentum for primary exemplar
+    min_confidence_to_update: 0.60 # Only update appearance on high-confidence unoccluded crops
+    max_overlap_to_update: 0.30 # Avoid updating gallery when crop overlaps with another pedestrian
+
+counting:
+  line_orientation: "horizontal" # or "vertical"
+  virtual_line: [0.5, 0.5] # Normalized coordinates [x, y] or line segment
+  direction_angle_tolerance: 45.0 # Degrees
+  counting_cooldown_frames: 30 # Prevent double-counting jitter near the line
+
+evaluation:
+  benchmark: "MOT17"
+  match_iou_threshold: 0.50
+  metrics:
+    - "HOTA"
+    - "MOTA"
+    - "IDF1"
+    - "IDSW"
+    - "DetA"
+    - "AssA"
+    - "MT"
+    - "ML"
+    - "Frag"
+    - "FP"
+    - "FN"
+

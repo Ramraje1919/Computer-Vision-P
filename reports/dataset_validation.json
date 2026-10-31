@@ -1,0 +1,2357 @@
+{
+  "summary": {
+    "total_sequences_found": 42,
+    "train_sequences": 21,
+    "test_sequences": 21,
+    "unique_underlying_sequences": 14,
+    "unique_train_sequences": 7,
+    "unique_test_sequences": 7,
+    "all_sequences_valid": true,
+    "variants_per_sequence": 3
+  },
+  "underlying_sequences": {
+    "MOT17-02": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 600
+    },
+    "MOT17-04": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 1050
+    },
+    "MOT17-05": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "640x480",
+      "frames": 837
+    },
+    "MOT17-09": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 525
+    },
+    "MOT17-10": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 654
+    },
+    "MOT17-11": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 900
+    },
+    "MOT17-13": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "train",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 750
+    },
+    "MOT17-01": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 450
+    },
+    "MOT17-03": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 1500
+    },
+    "MOT17-06": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "640x480",
+      "frames": 1194
+    },
+    "MOT17-07": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 500
+    },
+    "MOT17-08": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 625
+    },
+    "MOT17-12": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 900
+    },
+    "MOT17-14": {
+      "variants": [
+        "DPM",
+        "FRCNN",
+        "SDP"
+      ],
+      "split": "test",
+      "identical_underlying_frames": true,
+      "consistent_resolution": true,
+      "consistent_frames": true,
+      "resolution": "1920x1080",
+      "frames": 750
+    }
+  },
+  "recommendations": {
+    "crowded_pedestrians": [
+      {
+        "sequence": "MOT17-02",
+        "avg_peds": 30.97,
+        "max_peds": 36,
+        "reason": "High density with up to 36 simultaneous active pedestrians"
+      },
+      {
+        "sequence": "MOT17-04",
+        "avg_peds": 45.29,
+        "max_peds": 52,
+        "reason": "High density with up to 52 simultaneous active pedestrians"
+      },
+      {
+        "sequence": "MOT17-10",
+        "avg_peds": 19.63,
+        "max_peds": 27,
+        "reason": "High density with up to 27 simultaneous active pedestrians"
+      },
+      {
+        "sequence": "MOT17-13",
+        "avg_peds": 15.52,
+        "max_peds": 32,
+        "reason": "High density with up to 32 simultaneous active pedestrians"
+      }
+    ],
+    "heavy_occlusion": [
+      {
+        "sequence": "MOT17-02",
+        "heavy_occlusion_rate": "54.81%",
+        "reason": "54.81% of pedestrian annotations have visibility < 35%"
+      },
+      {
+        "sequence": "MOT17-04",
+        "heavy_occlusion_rate": "28.22%",
+        "reason": "28.22% of pedestrian annotations have visibility < 35%"
+      },
+      {
+        "sequence": "MOT17-05",
+        "heavy_occlusion_rate": "37.13%",
+        "reason": "37.13% of pedestrian annotations have visibility < 35%"
+      },
+      {
+        "sequence": "MOT17-09",
+        "heavy_occlusion_rate": "34.1%",
+        "reason": "34.1% of pedestrian annotations have visibility < 35%"
+      },
+      {
+        "sequence": "MOT17-10",
+        "heavy_occlusion_rate": "22.11%",
+        "reason": "22.11% of pedestrian annotations have visibility < 35%"
+      },
+      {
+        "sequence": "MOT17-11",
+        "heavy_occlusion_rate": "25.26%",
+        "reason": "25.26% of pedestrian annotations have visibility < 35%"
+      },
+      {
+        "sequence": "MOT17-13",
+        "heavy_occlusion_rate": "20.4%",
+        "reason": "20.4% of pedestrian annotations have visibility < 35%"
+      }
+    ],
+    "crossing_pedestrians": [
+      {
+        "sequence": "MOT17-02",
+        "camera": "Static",
+        "reason": "Frequent trajectory intersections and bi-directional pedestrian flow"
+      },
+      {
+        "sequence": "MOT17-04",
+        "camera": "Static",
+        "reason": "Frequent trajectory intersections and bi-directional pedestrian flow"
+      },
+      {
+        "sequence": "MOT17-10",
+        "camera": "Moving",
+        "reason": "Frequent trajectory intersections and bi-directional pedestrian flow"
+      }
+    ],
+    "small_pedestrians": [
+      {
+        "sequence": "MOT17-02",
+        "resolution": "1920x1080",
+        "reason": "High elevation or wide field-of-view yielding small bounding boxes"
+      },
+      {
+        "sequence": "MOT17-04",
+        "resolution": "1920x1080",
+        "reason": "High elevation or wide field-of-view yielding small bounding boxes"
+      },
+      {
+        "sequence": "MOT17-13",
+        "resolution": "1920x1080",
+        "reason": "High elevation or wide field-of-view yielding small bounding boxes"
+      }
+    ],
+    "long_term_recovery": [
+      {
+        "sequence": "MOT17-02",
+        "max_track_len": 600,
+        "frames": 600,
+        "reason": "Long duration (600 frames) with tracks persisting up to 600 frames across visual occluders"
+      },
+      {
+        "sequence": "MOT17-04",
+        "max_track_len": 1050,
+        "frames": 1050,
+        "reason": "Long duration (1050 frames) with tracks persisting up to 1050 frames across visual occluders"
+      },
+      {
+        "sequence": "MOT17-05",
+        "max_track_len": 394,
+        "frames": 837,
+        "reason": "Long duration (837 frames) with tracks persisting up to 394 frames across visual occluders"
+      },
+      {
+        "sequence": "MOT17-09",
+        "max_track_len": 490,
+        "frames": 525,
+        "reason": "Long duration (525 frames) with tracks persisting up to 490 frames across visual occluders"
+      },
+      {
+        "sequence": "MOT17-10",
+        "max_track_len": 654,
+        "frames": 654,
+        "reason": "Long duration (654 frames) with tracks persisting up to 654 frames across visual occluders"
+      },
+      {
+        "sequence": "MOT17-11",
+        "max_track_len": 900,
+        "frames": 900,
+        "reason": "Long duration (900 frames) with tracks persisting up to 900 frames across visual occluders"
+      },
+      {
+        "sequence": "MOT17-13",
+        "max_track_len": 396,
+        "frames": 750,
+        "reason": "Long duration (750 frames) with tracks persisting up to 396 frames across visual occluders"
+      }
+    ]
+  },
+  "sequences": [
+    {
+      "sequence_name": "MOT17-02-DPM",
+      "base_sequence": "MOT17-02",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 600,
+      "actual_image_count": 600,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 20.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "cf739a045383c43a4fbce1bb8b9b4503",
+      "gt_stats": {
+        "total_annotations": 30003,
+        "pedestrian_annotations": 18581,
+        "total_unique_ids": 83,
+        "pedestrian_unique_ids": 62,
+        "class_distribution": {
+          "Pedestrian": 18581,
+          "Person on vehicle": 1549,
+          "Bicycle": 1559,
+          "Static person": 5271,
+          "Distractor": 1200,
+          "Occluder": 1843
+        },
+        "confidence_distribution": {
+          "0": 11422,
+          "1": 18581
+        },
+        "avg_pedestrians_per_frame": 30.97,
+        "max_pedestrians_per_frame": 36,
+        "avg_pedestrian_track_len": 299.7,
+        "median_pedestrian_track_len": 303.5,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 600,
+        "heavy_occlusion_rate": 54.81,
+        "full_visibility_rate": 25.24,
+        "out_of_bounds_annotations": 216
+      },
+      "det_stats": {
+        "total_detections": 7267,
+        "frames_with_detections": 600,
+        "avg_detections_per_frame": 12.11,
+        "max_detections_per_frame": 22,
+        "conf_min": -0.5,
+        "conf_max": 3.1365,
+        "conf_mean": 0.3949
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime indoor (mall)",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-02-FRCNN",
+      "base_sequence": "MOT17-02",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 600,
+      "actual_image_count": 600,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 20.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "cf739a045383c43a4fbce1bb8b9b4503",
+      "gt_stats": {
+        "total_annotations": 30003,
+        "pedestrian_annotations": 18581,
+        "total_unique_ids": 83,
+        "pedestrian_unique_ids": 62,
+        "class_distribution": {
+          "Pedestrian": 18581,
+          "Person on vehicle": 1549,
+          "Bicycle": 1559,
+          "Static person": 5271,
+          "Distractor": 1200,
+          "Occluder": 1843
+        },
+        "confidence_distribution": {
+          "0": 11422,
+          "1": 18581
+        },
+        "avg_pedestrians_per_frame": 30.97,
+        "max_pedestrians_per_frame": 36,
+        "avg_pedestrian_track_len": 299.7,
+        "median_pedestrian_track_len": 303.5,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 600,
+        "heavy_occlusion_rate": 54.81,
+        "full_visibility_rate": 25.24,
+        "out_of_bounds_annotations": 216
+      },
+      "det_stats": {
+        "total_detections": 8186,
+        "frames_with_detections": 600,
+        "avg_detections_per_frame": 13.64,
+        "max_detections_per_frame": 18,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9224
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime indoor (mall)",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-02-SDP",
+      "base_sequence": "MOT17-02",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 600,
+      "actual_image_count": 600,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 20.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "cf739a045383c43a4fbce1bb8b9b4503",
+      "gt_stats": {
+        "total_annotations": 30003,
+        "pedestrian_annotations": 18581,
+        "total_unique_ids": 83,
+        "pedestrian_unique_ids": 62,
+        "class_distribution": {
+          "Pedestrian": 18581,
+          "Person on vehicle": 1549,
+          "Bicycle": 1559,
+          "Static person": 5271,
+          "Distractor": 1200,
+          "Occluder": 1843
+        },
+        "confidence_distribution": {
+          "0": 11422,
+          "1": 18581
+        },
+        "avg_pedestrians_per_frame": 30.97,
+        "max_pedestrians_per_frame": 36,
+        "avg_pedestrian_track_len": 299.7,
+        "median_pedestrian_track_len": 303.5,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 600,
+        "heavy_occlusion_rate": 54.81,
+        "full_visibility_rate": 25.24,
+        "out_of_bounds_annotations": 216
+      },
+      "det_stats": {
+        "total_detections": 11639,
+        "frames_with_detections": 600,
+        "avg_detections_per_frame": 19.4,
+        "max_detections_per_frame": 27,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9592
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime indoor (mall)",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-04-DPM",
+      "base_sequence": "MOT17-04",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 1050,
+      "actual_image_count": 1050,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 35.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "11690e61f079277aecb278bc2baf0577",
+      "gt_stats": {
+        "total_annotations": 108005,
+        "pedestrian_annotations": 47557,
+        "total_unique_ids": 141,
+        "pedestrian_unique_ids": 83,
+        "class_distribution": {
+          "Pedestrian": 47557,
+          "Car": 1050,
+          "Bicycle": 11550,
+          "Motorbike": 1050,
+          "Static person": 4798,
+          "Occluder on ground": 23100,
+          "Occluder full": 18900
+        },
+        "confidence_distribution": {
+          "1": 47557,
+          "0": 60448
+        },
+        "avg_pedestrians_per_frame": 45.29,
+        "max_pedestrians_per_frame": 52,
+        "avg_pedestrian_track_len": 573.0,
+        "median_pedestrian_track_len": 540.0,
+        "min_pedestrian_track_len": 20,
+        "max_pedestrian_track_len": 1050,
+        "heavy_occlusion_rate": 28.22,
+        "full_visibility_rate": 30.29,
+        "out_of_bounds_annotations": 6968
+      },
+      "det_stats": {
+        "total_detections": 39437,
+        "frames_with_detections": 1050,
+        "avg_detections_per_frame": 37.56,
+        "max_detections_per_frame": 54,
+        "conf_min": -0.5,
+        "conf_max": 4.7733,
+        "conf_mean": 0.5154
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "High angle",
+        "conditions": "Night outdoor",
+        "crowd": "Very High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-04-FRCNN",
+      "base_sequence": "MOT17-04",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 1050,
+      "actual_image_count": 1050,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 35.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "11690e61f079277aecb278bc2baf0577",
+      "gt_stats": {
+        "total_annotations": 108005,
+        "pedestrian_annotations": 47557,
+        "total_unique_ids": 141,
+        "pedestrian_unique_ids": 83,
+        "class_distribution": {
+          "Pedestrian": 47557,
+          "Car": 1050,
+          "Bicycle": 11550,
+          "Motorbike": 1050,
+          "Static person": 4798,
+          "Occluder on ground": 23100,
+          "Occluder full": 18900
+        },
+        "confidence_distribution": {
+          "1": 47557,
+          "0": 60448
+        },
+        "avg_pedestrians_per_frame": 45.29,
+        "max_pedestrians_per_frame": 52,
+        "avg_pedestrian_track_len": 573.0,
+        "median_pedestrian_track_len": 540.0,
+        "min_pedestrian_track_len": 20,
+        "max_pedestrian_track_len": 1050,
+        "heavy_occlusion_rate": 28.22,
+        "full_visibility_rate": 30.29,
+        "out_of_bounds_annotations": 6968
+      },
+      "det_stats": {
+        "total_detections": 28406,
+        "frames_with_detections": 1050,
+        "avg_detections_per_frame": 27.05,
+        "max_detections_per_frame": 34,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9796
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "High angle",
+        "conditions": "Night outdoor",
+        "crowd": "Very High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-04-SDP",
+      "base_sequence": "MOT17-04",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 1050,
+      "actual_image_count": 1050,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 35.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "11690e61f079277aecb278bc2baf0577",
+      "gt_stats": {
+        "total_annotations": 108005,
+        "pedestrian_annotations": 47557,
+        "total_unique_ids": 141,
+        "pedestrian_unique_ids": 83,
+        "class_distribution": {
+          "Pedestrian": 47557,
+          "Car": 1050,
+          "Bicycle": 11550,
+          "Motorbike": 1050,
+          "Static person": 4798,
+          "Occluder on ground": 23100,
+          "Occluder full": 18900
+        },
+        "confidence_distribution": {
+          "1": 47557,
+          "0": 60448
+        },
+        "avg_pedestrians_per_frame": 45.29,
+        "max_pedestrians_per_frame": 52,
+        "avg_pedestrian_track_len": 573.0,
+        "median_pedestrian_track_len": 540.0,
+        "min_pedestrian_track_len": 20,
+        "max_pedestrian_track_len": 1050,
+        "heavy_occlusion_rate": 28.22,
+        "full_visibility_rate": 30.29,
+        "out_of_bounds_annotations": 6968
+      },
+      "det_stats": {
+        "total_detections": 37150,
+        "frames_with_detections": 1050,
+        "avg_detections_per_frame": 35.38,
+        "max_detections_per_frame": 43,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9792
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "High angle",
+        "conditions": "Night outdoor",
+        "crowd": "Very High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-05-DPM",
+      "base_sequence": "MOT17-05",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 837,
+      "actual_image_count": 837,
+      "frame_rate": 14.0,
+      "resolution": "640x480",
+      "imWidth": 640,
+      "imHeight": 480,
+      "duration_seconds": 59.79,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "a4df713db23c0ea87db20e22b8c34c61",
+      "gt_stats": {
+        "total_annotations": 8013,
+        "pedestrian_annotations": 6917,
+        "total_unique_ids": 156,
+        "pedestrian_unique_ids": 133,
+        "class_distribution": {
+          "Pedestrian": 6917,
+          "Person on vehicle": 315,
+          "Car": 196,
+          "Bicycle": 315,
+          "Non motorized vehicle": 11,
+          "Distractor": 24,
+          "Occluder": 235
+        },
+        "confidence_distribution": {
+          "1": 6917,
+          "0": 1096
+        },
+        "avg_pedestrians_per_frame": 8.26,
+        "max_pedestrians_per_frame": 15,
+        "avg_pedestrian_track_len": 52.0,
+        "median_pedestrian_track_len": 30.0,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 394,
+        "heavy_occlusion_rate": 37.13,
+        "full_visibility_rate": 24.91,
+        "out_of_bounds_annotations": 1290
+      },
+      "det_stats": {
+        "total_detections": 4333,
+        "frames_with_detections": 834,
+        "avg_detections_per_frame": 5.2,
+        "max_detections_per_frame": 14,
+        "conf_min": -0.4998,
+        "conf_max": 3.7608,
+        "conf_mean": 0.5643
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-05-FRCNN",
+      "base_sequence": "MOT17-05",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 837,
+      "actual_image_count": 837,
+      "frame_rate": 14.0,
+      "resolution": "640x480",
+      "imWidth": 640,
+      "imHeight": 480,
+      "duration_seconds": 59.79,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "a4df713db23c0ea87db20e22b8c34c61",
+      "gt_stats": {
+        "total_annotations": 8013,
+        "pedestrian_annotations": 6917,
+        "total_unique_ids": 156,
+        "pedestrian_unique_ids": 133,
+        "class_distribution": {
+          "Pedestrian": 6917,
+          "Person on vehicle": 315,
+          "Car": 196,
+          "Bicycle": 315,
+          "Non motorized vehicle": 11,
+          "Distractor": 24,
+          "Occluder": 235
+        },
+        "confidence_distribution": {
+          "1": 6917,
+          "0": 1096
+        },
+        "avg_pedestrians_per_frame": 8.26,
+        "max_pedestrians_per_frame": 15,
+        "avg_pedestrian_track_len": 52.0,
+        "median_pedestrian_track_len": 30.0,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 394,
+        "heavy_occlusion_rate": 37.13,
+        "full_visibility_rate": 24.91,
+        "out_of_bounds_annotations": 1290
+      },
+      "det_stats": {
+        "total_detections": 3848,
+        "frames_with_detections": 837,
+        "avg_detections_per_frame": 4.6,
+        "max_detections_per_frame": 10,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9266
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-05-SDP",
+      "base_sequence": "MOT17-05",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 837,
+      "actual_image_count": 837,
+      "frame_rate": 14.0,
+      "resolution": "640x480",
+      "imWidth": 640,
+      "imHeight": 480,
+      "duration_seconds": 59.79,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "a4df713db23c0ea87db20e22b8c34c61",
+      "gt_stats": {
+        "total_annotations": 8013,
+        "pedestrian_annotations": 6917,
+        "total_unique_ids": 156,
+        "pedestrian_unique_ids": 133,
+        "class_distribution": {
+          "Pedestrian": 6917,
+          "Person on vehicle": 315,
+          "Car": 196,
+          "Bicycle": 315,
+          "Non motorized vehicle": 11,
+          "Distractor": 24,
+          "Occluder": 235
+        },
+        "confidence_distribution": {
+          "1": 6917,
+          "0": 1096
+        },
+        "avg_pedestrians_per_frame": 8.26,
+        "max_pedestrians_per_frame": 15,
+        "avg_pedestrian_track_len": 52.0,
+        "median_pedestrian_track_len": 30.0,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 394,
+        "heavy_occlusion_rate": 37.13,
+        "full_visibility_rate": 24.91,
+        "out_of_bounds_annotations": 1290
+      },
+      "det_stats": {
+        "total_detections": 4767,
+        "frames_with_detections": 837,
+        "avg_detections_per_frame": 5.7,
+        "max_detections_per_frame": 15,
+        "conf_min": 0.402,
+        "conf_max": 1.0,
+        "conf_mean": 0.9577
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-09-DPM",
+      "base_sequence": "MOT17-09",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 525,
+      "actual_image_count": 525,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 17.5,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "7cbb1f81cc2bc8e0f33c90122990b7ba",
+      "gt_stats": {
+        "total_annotations": 10411,
+        "pedestrian_annotations": 5325,
+        "total_unique_ids": 64,
+        "pedestrian_unique_ids": 26,
+        "class_distribution": {
+          "Pedestrian": 5325,
+          "Static person": 514,
+          "Distractor": 1575,
+          "Occluder": 1050,
+          "Reflection": 1947
+        },
+        "confidence_distribution": {
+          "1": 5325,
+          "0": 5086
+        },
+        "avg_pedestrians_per_frame": 10.14,
+        "max_pedestrians_per_frame": 13,
+        "avg_pedestrian_track_len": 204.8,
+        "median_pedestrian_track_len": 210.0,
+        "min_pedestrian_track_len": 14,
+        "max_pedestrian_track_len": 490,
+        "heavy_occlusion_rate": 34.1,
+        "full_visibility_rate": 39.91,
+        "out_of_bounds_annotations": 251
+      },
+      "det_stats": {
+        "total_detections": 5976,
+        "frames_with_detections": 525,
+        "avg_detections_per_frame": 11.38,
+        "max_detections_per_frame": 20,
+        "conf_min": -0.5,
+        "conf_max": 4.5783,
+        "conf_mean": 0.6101
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-09-FRCNN",
+      "base_sequence": "MOT17-09",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 525,
+      "actual_image_count": 525,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 17.5,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "7cbb1f81cc2bc8e0f33c90122990b7ba",
+      "gt_stats": {
+        "total_annotations": 10411,
+        "pedestrian_annotations": 5325,
+        "total_unique_ids": 64,
+        "pedestrian_unique_ids": 26,
+        "class_distribution": {
+          "Pedestrian": 5325,
+          "Static person": 514,
+          "Distractor": 1575,
+          "Occluder": 1050,
+          "Reflection": 1947
+        },
+        "confidence_distribution": {
+          "1": 5325,
+          "0": 5086
+        },
+        "avg_pedestrians_per_frame": 10.14,
+        "max_pedestrians_per_frame": 13,
+        "avg_pedestrian_track_len": 204.8,
+        "median_pedestrian_track_len": 210.0,
+        "min_pedestrian_track_len": 14,
+        "max_pedestrian_track_len": 490,
+        "heavy_occlusion_rate": 34.1,
+        "full_visibility_rate": 39.91,
+        "out_of_bounds_annotations": 251
+      },
+      "det_stats": {
+        "total_detections": 3049,
+        "frames_with_detections": 525,
+        "avg_detections_per_frame": 5.81,
+        "max_detections_per_frame": 10,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9663
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-09-SDP",
+      "base_sequence": "MOT17-09",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 525,
+      "actual_image_count": 525,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 17.5,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "7cbb1f81cc2bc8e0f33c90122990b7ba",
+      "gt_stats": {
+        "total_annotations": 10411,
+        "pedestrian_annotations": 5325,
+        "total_unique_ids": 64,
+        "pedestrian_unique_ids": 26,
+        "class_distribution": {
+          "Pedestrian": 5325,
+          "Static person": 514,
+          "Distractor": 1575,
+          "Occluder": 1050,
+          "Reflection": 1947
+        },
+        "confidence_distribution": {
+          "1": 5325,
+          "0": 5086
+        },
+        "avg_pedestrians_per_frame": 10.14,
+        "max_pedestrians_per_frame": 13,
+        "avg_pedestrian_track_len": 204.8,
+        "median_pedestrian_track_len": 210.0,
+        "min_pedestrian_track_len": 14,
+        "max_pedestrian_track_len": 490,
+        "heavy_occlusion_rate": 34.1,
+        "full_visibility_rate": 39.91,
+        "out_of_bounds_annotations": 251
+      },
+      "det_stats": {
+        "total_detections": 3607,
+        "frames_with_detections": 525,
+        "avg_detections_per_frame": 6.87,
+        "max_detections_per_frame": 11,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9777
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-10-DPM",
+      "base_sequence": "MOT17-10",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 654,
+      "actual_image_count": 654,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 21.8,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "c998991b74de389ae364f46eca371a08",
+      "gt_stats": {
+        "total_annotations": 17450,
+        "pedestrian_annotations": 12839,
+        "total_unique_ids": 73,
+        "pedestrian_unique_ids": 57,
+        "class_distribution": {
+          "Pedestrian": 12839,
+          "Car": 25,
+          "Static person": 1376,
+          "Distractor": 470,
+          "Occluder on ground": 2740
+        },
+        "confidence_distribution": {
+          "1": 12839,
+          "0": 4611
+        },
+        "avg_pedestrians_per_frame": 19.63,
+        "max_pedestrians_per_frame": 27,
+        "avg_pedestrian_track_len": 225.2,
+        "median_pedestrian_track_len": 172.0,
+        "min_pedestrian_track_len": 15,
+        "max_pedestrian_track_len": 654,
+        "heavy_occlusion_rate": 22.11,
+        "full_visibility_rate": 47.22,
+        "out_of_bounds_annotations": 539
+      },
+      "det_stats": {
+        "total_detections": 8832,
+        "frames_with_detections": 654,
+        "avg_detections_per_frame": 13.5,
+        "max_detections_per_frame": 23,
+        "conf_min": -0.5,
+        "conf_max": 3.7868,
+        "conf_mean": 0.4637
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Night outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-10-FRCNN",
+      "base_sequence": "MOT17-10",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 654,
+      "actual_image_count": 654,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 21.8,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "c998991b74de389ae364f46eca371a08",
+      "gt_stats": {
+        "total_annotations": 17450,
+        "pedestrian_annotations": 12839,
+        "total_unique_ids": 73,
+        "pedestrian_unique_ids": 57,
+        "class_distribution": {
+          "Pedestrian": 12839,
+          "Car": 25,
+          "Static person": 1376,
+          "Distractor": 470,
+          "Occluder on ground": 2740
+        },
+        "confidence_distribution": {
+          "1": 12839,
+          "0": 4611
+        },
+        "avg_pedestrians_per_frame": 19.63,
+        "max_pedestrians_per_frame": 27,
+        "avg_pedestrian_track_len": 225.2,
+        "median_pedestrian_track_len": 172.0,
+        "min_pedestrian_track_len": 15,
+        "max_pedestrian_track_len": 654,
+        "heavy_occlusion_rate": 22.11,
+        "full_visibility_rate": 47.22,
+        "out_of_bounds_annotations": 539
+      },
+      "det_stats": {
+        "total_detections": 9701,
+        "frames_with_detections": 654,
+        "avg_detections_per_frame": 14.83,
+        "max_detections_per_frame": 21,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9039
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Night outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-10-SDP",
+      "base_sequence": "MOT17-10",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 654,
+      "actual_image_count": 654,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 21.8,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "c998991b74de389ae364f46eca371a08",
+      "gt_stats": {
+        "total_annotations": 17450,
+        "pedestrian_annotations": 12839,
+        "total_unique_ids": 73,
+        "pedestrian_unique_ids": 57,
+        "class_distribution": {
+          "Pedestrian": 12839,
+          "Car": 25,
+          "Static person": 1376,
+          "Distractor": 470,
+          "Occluder on ground": 2740
+        },
+        "confidence_distribution": {
+          "1": 12839,
+          "0": 4611
+        },
+        "avg_pedestrians_per_frame": 19.63,
+        "max_pedestrians_per_frame": 27,
+        "avg_pedestrian_track_len": 225.2,
+        "median_pedestrian_track_len": 172.0,
+        "min_pedestrian_track_len": 15,
+        "max_pedestrian_track_len": 654,
+        "heavy_occlusion_rate": 22.11,
+        "full_visibility_rate": 47.22,
+        "out_of_bounds_annotations": 539
+      },
+      "det_stats": {
+        "total_detections": 10371,
+        "frames_with_detections": 654,
+        "avg_detections_per_frame": 15.86,
+        "max_detections_per_frame": 24,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9557
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Night outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-11-DPM",
+      "base_sequence": "MOT17-11",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 900,
+      "actual_image_count": 900,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "ca5f60ff174b0254cf8a51a182096e8f",
+      "gt_stats": {
+        "total_annotations": 10617,
+        "pedestrian_annotations": 9436,
+        "total_unique_ids": 91,
+        "pedestrian_unique_ids": 75,
+        "class_distribution": {
+          "Pedestrian": 9436,
+          "Static person": 82,
+          "Distractor": 322,
+          "Occluder": 596,
+          "Reflection": 181
+        },
+        "confidence_distribution": {
+          "1": 9436,
+          "0": 1181
+        },
+        "avg_pedestrians_per_frame": 10.48,
+        "max_pedestrians_per_frame": 19,
+        "avg_pedestrian_track_len": 125.8,
+        "median_pedestrian_track_len": 77.0,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 900,
+        "heavy_occlusion_rate": 25.26,
+        "full_visibility_rate": 40.99,
+        "out_of_bounds_annotations": 986
+      },
+      "det_stats": {
+        "total_detections": 8590,
+        "frames_with_detections": 900,
+        "avg_detections_per_frame": 9.54,
+        "max_detections_per_frame": 17,
+        "conf_min": -0.4999,
+        "conf_max": 4.203,
+        "conf_mean": 0.8556
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime indoor (mall)",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-11-FRCNN",
+      "base_sequence": "MOT17-11",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 900,
+      "actual_image_count": 900,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "ca5f60ff174b0254cf8a51a182096e8f",
+      "gt_stats": {
+        "total_annotations": 10617,
+        "pedestrian_annotations": 9436,
+        "total_unique_ids": 91,
+        "pedestrian_unique_ids": 75,
+        "class_distribution": {
+          "Pedestrian": 9436,
+          "Static person": 82,
+          "Distractor": 322,
+          "Occluder": 596,
+          "Reflection": 181
+        },
+        "confidence_distribution": {
+          "1": 9436,
+          "0": 1181
+        },
+        "avg_pedestrians_per_frame": 10.48,
+        "max_pedestrians_per_frame": 19,
+        "avg_pedestrian_track_len": 125.8,
+        "median_pedestrian_track_len": 77.0,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 900,
+        "heavy_occlusion_rate": 25.26,
+        "full_visibility_rate": 40.99,
+        "out_of_bounds_annotations": 986
+      },
+      "det_stats": {
+        "total_detections": 6007,
+        "frames_with_detections": 900,
+        "avg_detections_per_frame": 6.67,
+        "max_detections_per_frame": 18,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9444
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime indoor (mall)",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-11-SDP",
+      "base_sequence": "MOT17-11",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 900,
+      "actual_image_count": 900,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "ca5f60ff174b0254cf8a51a182096e8f",
+      "gt_stats": {
+        "total_annotations": 10617,
+        "pedestrian_annotations": 9436,
+        "total_unique_ids": 91,
+        "pedestrian_unique_ids": 75,
+        "class_distribution": {
+          "Pedestrian": 9436,
+          "Static person": 82,
+          "Distractor": 322,
+          "Occluder": 596,
+          "Reflection": 181
+        },
+        "confidence_distribution": {
+          "1": 9436,
+          "0": 1181
+        },
+        "avg_pedestrians_per_frame": 10.48,
+        "max_pedestrians_per_frame": 19,
+        "avg_pedestrian_track_len": 125.8,
+        "median_pedestrian_track_len": 77.0,
+        "min_pedestrian_track_len": 1,
+        "max_pedestrian_track_len": 900,
+        "heavy_occlusion_rate": 25.26,
+        "full_visibility_rate": 40.99,
+        "out_of_bounds_annotations": 986
+      },
+      "det_stats": {
+        "total_detections": 7509,
+        "frames_with_detections": 900,
+        "avg_detections_per_frame": 8.34,
+        "max_detections_per_frame": 24,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9712
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime indoor (mall)",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-13-DPM",
+      "base_sequence": "MOT17-13",
+      "detector_variant": "DPM",
+      "split": "train",
+      "frames": 750,
+      "actual_image_count": 750,
+      "frame_rate": 25.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "22a017bb1c85790338f8f4523162b19f",
+      "gt_stats": {
+        "total_annotations": 20202,
+        "pedestrian_annotations": 11642,
+        "total_unique_ids": 188,
+        "pedestrian_unique_ids": 110,
+        "class_distribution": {
+          "Pedestrian": 11642,
+          "Car": 4918,
+          "Bicycle": 103,
+          "Distractor": 4,
+          "Occluder on ground": 2733,
+          "Occluder full": 680,
+          "Reflection": 122
+        },
+        "confidence_distribution": {
+          "0": 8560,
+          "1": 11642
+        },
+        "avg_pedestrians_per_frame": 15.52,
+        "max_pedestrians_per_frame": 32,
+        "avg_pedestrian_track_len": 105.8,
+        "median_pedestrian_track_len": 98.5,
+        "min_pedestrian_track_len": 2,
+        "max_pedestrian_track_len": 396,
+        "heavy_occlusion_rate": 20.4,
+        "full_visibility_rate": 36.86,
+        "out_of_bounds_annotations": 539
+      },
+      "det_stats": {
+        "total_detections": 5355,
+        "frames_with_detections": 742,
+        "avg_detections_per_frame": 7.22,
+        "max_detections_per_frame": 20,
+        "conf_min": -0.5,
+        "conf_max": 3.3918,
+        "conf_mean": 0.1349
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle (bus)",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-13-FRCNN",
+      "base_sequence": "MOT17-13",
+      "detector_variant": "FRCNN",
+      "split": "train",
+      "frames": 750,
+      "actual_image_count": 750,
+      "frame_rate": 25.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "22a017bb1c85790338f8f4523162b19f",
+      "gt_stats": {
+        "total_annotations": 20202,
+        "pedestrian_annotations": 11642,
+        "total_unique_ids": 188,
+        "pedestrian_unique_ids": 110,
+        "class_distribution": {
+          "Pedestrian": 11642,
+          "Car": 4918,
+          "Bicycle": 103,
+          "Distractor": 4,
+          "Occluder on ground": 2733,
+          "Occluder full": 680,
+          "Reflection": 122
+        },
+        "confidence_distribution": {
+          "0": 8560,
+          "1": 11642
+        },
+        "avg_pedestrians_per_frame": 15.52,
+        "max_pedestrians_per_frame": 32,
+        "avg_pedestrian_track_len": 105.8,
+        "median_pedestrian_track_len": 98.5,
+        "min_pedestrian_track_len": 2,
+        "max_pedestrian_track_len": 396,
+        "heavy_occlusion_rate": 20.4,
+        "full_visibility_rate": 36.86,
+        "out_of_bounds_annotations": 539
+      },
+      "det_stats": {
+        "total_detections": 8442,
+        "frames_with_detections": 750,
+        "avg_detections_per_frame": 11.26,
+        "max_detections_per_frame": 30,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.8607
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle (bus)",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-13-SDP",
+      "base_sequence": "MOT17-13",
+      "detector_variant": "SDP",
+      "split": "train",
+      "frames": 750,
+      "actual_image_count": 750,
+      "frame_rate": 25.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": true,
+      "det_available": true,
+      "sample_img_hash": "22a017bb1c85790338f8f4523162b19f",
+      "gt_stats": {
+        "total_annotations": 20202,
+        "pedestrian_annotations": 11642,
+        "total_unique_ids": 188,
+        "pedestrian_unique_ids": 110,
+        "class_distribution": {
+          "Pedestrian": 11642,
+          "Car": 4918,
+          "Bicycle": 103,
+          "Distractor": 4,
+          "Occluder on ground": 2733,
+          "Occluder full": 680,
+          "Reflection": 122
+        },
+        "confidence_distribution": {
+          "0": 8560,
+          "1": 11642
+        },
+        "avg_pedestrians_per_frame": 15.52,
+        "max_pedestrians_per_frame": 32,
+        "avg_pedestrian_track_len": 105.8,
+        "median_pedestrian_track_len": 98.5,
+        "min_pedestrian_track_len": 2,
+        "max_pedestrian_track_len": 396,
+        "heavy_occlusion_rate": 20.4,
+        "full_visibility_rate": 36.86,
+        "out_of_bounds_annotations": 539
+      },
+      "det_stats": {
+        "total_detections": 7744,
+        "frames_with_detections": 744,
+        "avg_detections_per_frame": 10.41,
+        "max_detections_per_frame": 28,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9308
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle (bus)",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-01-DPM",
+      "base_sequence": "MOT17-01",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 450,
+      "actual_image_count": 450,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 15.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "d0e251c98aed01697f149712cf8bbe51",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 3775,
+        "frames_with_detections": 450,
+        "avg_detections_per_frame": 8.39,
+        "max_detections_per_frame": 15,
+        "conf_min": -0.5,
+        "conf_max": 3.2733,
+        "conf_mean": 0.2341
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-01-FRCNN",
+      "base_sequence": "MOT17-01",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 450,
+      "actual_image_count": 450,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 15.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "d0e251c98aed01697f149712cf8bbe51",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 5514,
+        "frames_with_detections": 450,
+        "avg_detections_per_frame": 12.25,
+        "max_detections_per_frame": 16,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.8714
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-01-SDP",
+      "base_sequence": "MOT17-01",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 450,
+      "actual_image_count": 450,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 15.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "d0e251c98aed01697f149712cf8bbe51",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 5837,
+        "frames_with_detections": 450,
+        "avg_detections_per_frame": 12.97,
+        "max_detections_per_frame": 20,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.8614
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-03-DPM",
+      "base_sequence": "MOT17-03",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 1500,
+      "actual_image_count": 1500,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 50.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "1ce86217dd746a43d61e1dcdc6207687",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 85854,
+        "frames_with_detections": 1500,
+        "avg_detections_per_frame": 57.24,
+        "max_detections_per_frame": 78,
+        "conf_min": -0.5,
+        "conf_max": 4.0653,
+        "conf_mean": 0.4658
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "High angle",
+        "conditions": "Night outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-03-FRCNN",
+      "base_sequence": "MOT17-03",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 1500,
+      "actual_image_count": 1500,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 50.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "1ce86217dd746a43d61e1dcdc6207687",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 65739,
+        "frames_with_detections": 1500,
+        "avg_detections_per_frame": 43.83,
+        "max_detections_per_frame": 56,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.9488
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "High angle",
+        "conditions": "Night outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-03-SDP",
+      "base_sequence": "MOT17-03",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 1500,
+      "actual_image_count": 1500,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 50.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "1ce86217dd746a43d61e1dcdc6207687",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 80241,
+        "frames_with_detections": 1500,
+        "avg_detections_per_frame": 53.49,
+        "max_detections_per_frame": 65,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9674
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "High angle",
+        "conditions": "Night outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-06-DPM",
+      "base_sequence": "MOT17-06",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 1194,
+      "actual_image_count": 1194,
+      "frame_rate": 14.0,
+      "resolution": "640x480",
+      "imWidth": 640,
+      "imHeight": 480,
+      "duration_seconds": 85.29,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "5f1711880863f6d2c8fdd4d48e2df10f",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 7851,
+        "frames_with_detections": 1194,
+        "avg_detections_per_frame": 6.58,
+        "max_detections_per_frame": 14,
+        "conf_min": -0.4999,
+        "conf_max": 4.4947,
+        "conf_mean": 0.8036
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-06-FRCNN",
+      "base_sequence": "MOT17-06",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 1194,
+      "actual_image_count": 1194,
+      "frame_rate": 14.0,
+      "resolution": "640x480",
+      "imWidth": 640,
+      "imHeight": 480,
+      "duration_seconds": 85.29,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "5f1711880863f6d2c8fdd4d48e2df10f",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 7809,
+        "frames_with_detections": 1194,
+        "avg_detections_per_frame": 6.54,
+        "max_detections_per_frame": 13,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.8773
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-06-SDP",
+      "base_sequence": "MOT17-06",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 1194,
+      "actual_image_count": 1194,
+      "frame_rate": 14.0,
+      "resolution": "640x480",
+      "imWidth": 640,
+      "imHeight": 480,
+      "duration_seconds": 85.29,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "5f1711880863f6d2c8fdd4d48e2df10f",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 8283,
+        "frames_with_detections": 1194,
+        "avg_detections_per_frame": 6.94,
+        "max_detections_per_frame": 15,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9358
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Medium"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-07-DPM",
+      "base_sequence": "MOT17-07",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 500,
+      "actual_image_count": 500,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 16.67,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "902ed437966331e09094b0f9e45f54c6",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 11309,
+        "frames_with_detections": 500,
+        "avg_detections_per_frame": 22.62,
+        "max_detections_per_frame": 34,
+        "conf_min": -0.4999,
+        "conf_max": 3.6738,
+        "conf_mean": 0.4254
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-07-FRCNN",
+      "base_sequence": "MOT17-07",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 500,
+      "actual_image_count": 500,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 16.67,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "902ed437966331e09094b0f9e45f54c6",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 9377,
+        "frames_with_detections": 500,
+        "avg_detections_per_frame": 18.75,
+        "max_detections_per_frame": 28,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.8125
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-07-SDP",
+      "base_sequence": "MOT17-07",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 500,
+      "actual_image_count": 500,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 16.67,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "902ed437966331e09094b0f9e45f54c6",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 10273,
+        "frames_with_detections": 500,
+        "avg_detections_per_frame": 20.55,
+        "max_detections_per_frame": 27,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9012
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Medium angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-08-DPM",
+      "base_sequence": "MOT17-08",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 625,
+      "actual_image_count": 625,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 20.83,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "fad759944a02f8f672e95a01fa0f7b10",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 10042,
+        "frames_with_detections": 625,
+        "avg_detections_per_frame": 16.07,
+        "max_detections_per_frame": 26,
+        "conf_min": -0.5,
+        "conf_max": 4.1558,
+        "conf_mean": 0.7461
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-08-FRCNN",
+      "base_sequence": "MOT17-08",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 625,
+      "actual_image_count": 625,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 20.83,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "fad759944a02f8f672e95a01fa0f7b10",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 6921,
+        "frames_with_detections": 625,
+        "avg_detections_per_frame": 11.07,
+        "max_detections_per_frame": 16,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.8638
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-08-SDP",
+      "base_sequence": "MOT17-08",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 625,
+      "actual_image_count": 625,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 20.83,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "fad759944a02f8f672e95a01fa0f7b10",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 8118,
+        "frames_with_detections": 625,
+        "avg_detections_per_frame": 12.99,
+        "max_detections_per_frame": 20,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9267
+      },
+      "scene_metadata": {
+        "camera": "Static",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-12-DPM",
+      "base_sequence": "MOT17-12",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 900,
+      "actual_image_count": 900,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "baf1a5ba91b04aea790de59749fbf49e",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 7764,
+        "frames_with_detections": 888,
+        "avg_detections_per_frame": 8.74,
+        "max_detections_per_frame": 22,
+        "conf_min": -0.5,
+        "conf_max": 3.8654,
+        "conf_mean": 0.5165
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-12-FRCNN",
+      "base_sequence": "MOT17-12",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 900,
+      "actual_image_count": 900,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "baf1a5ba91b04aea790de59749fbf49e",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 4726,
+        "frames_with_detections": 889,
+        "avg_detections_per_frame": 5.32,
+        "max_detections_per_frame": 13,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.8263
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-12-SDP",
+      "base_sequence": "MOT17-12",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 900,
+      "actual_image_count": 900,
+      "frame_rate": 30.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "baf1a5ba91b04aea790de59749fbf49e",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 5440,
+        "frames_with_detections": 894,
+        "avg_detections_per_frame": 6.09,
+        "max_detections_per_frame": 13,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.9136
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle",
+        "conditions": "Daytime outdoor",
+        "crowd": "Low"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-14-DPM",
+      "base_sequence": "MOT17-14",
+      "detector_variant": "DPM",
+      "split": "test",
+      "frames": 750,
+      "actual_image_count": 750,
+      "frame_rate": 25.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "2bcd8876515e868456a4c72c9bcf0735",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 8781,
+        "frames_with_detections": 750,
+        "avg_detections_per_frame": 11.71,
+        "max_detections_per_frame": 27,
+        "conf_min": -0.5,
+        "conf_max": 3.7572,
+        "conf_mean": 0.0854
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle (bus)",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-14-FRCNN",
+      "base_sequence": "MOT17-14",
+      "detector_variant": "FRCNN",
+      "split": "test",
+      "frames": 750,
+      "actual_image_count": 750,
+      "frame_rate": 25.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "2bcd8876515e868456a4c72c9bcf0735",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 10055,
+        "frames_with_detections": 750,
+        "avg_detections_per_frame": 13.41,
+        "max_detections_per_frame": 26,
+        "conf_min": 0.05,
+        "conf_max": 1.0,
+        "conf_mean": 0.7742
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle (bus)",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "sequence_name": "MOT17-14-SDP",
+      "base_sequence": "MOT17-14",
+      "detector_variant": "SDP",
+      "split": "test",
+      "frames": 750,
+      "actual_image_count": 750,
+      "frame_rate": 25.0,
+      "resolution": "1920x1080",
+      "imWidth": 1920,
+      "imHeight": 1080,
+      "duration_seconds": 30.0,
+      "gt_available": false,
+      "det_available": true,
+      "sample_img_hash": "2bcd8876515e868456a4c72c9bcf0735",
+      "gt_stats": {},
+      "det_stats": {
+        "total_detections": 10461,
+        "frames_with_detections": 750,
+        "avg_detections_per_frame": 13.95,
+        "max_detections_per_frame": 28,
+        "conf_min": 0.4,
+        "conf_max": 1.0,
+        "conf_mean": 0.8244
+      },
+      "scene_metadata": {
+        "camera": "Moving",
+        "viewpoint": "Low angle (bus)",
+        "conditions": "Daytime outdoor",
+        "crowd": "High"
+      },
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}
