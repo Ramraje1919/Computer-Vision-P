@@ -237,6 +237,7 @@ PROJECT/
 ## Tracker Architectures
 
 ### ByteTrack (Selected)
+
 Two-stage BYTE association: high-confidence detections matched first (IoU),
 then low-confidence detections matched to remaining tracks. Kalman filter
 (8-state BoT-SORT formulation) for motion prediction.
@@ -244,12 +245,14 @@ then low-confidence detections matched to remaining tracks. Kalman filter
 **Best for**: Dense scenes, static cameras. Fastest and most reliable.
 
 ### BoT-SORT
+
 ByteTrack + optional Camera Motion Compensation (CMC / GMC).
 CMC disabled by default (CPU cost); enable for moving-camera sequences.
 
 **Best for**: Moving-camera sequences when CMC is enabled.
 
 ### HybridReIDTracker
+
 ByteTrack + OSNet appearance features fused into the cost matrix
 (`iou_weight=0.40, reid_weight=0.60`). Adds `osnet_x0_25_msmt17` embeddings.
 
@@ -306,5 +309,4 @@ homogeneous appearance. Use ByteTrack unless GPU inference is available.
 | [`reports/failure_analysis.md`](reports/failure_analysis.md) | Detailed failure mode analysis |
 | [`research/algorithm_comparison.md`](research/algorithm_comparison.md) | Algorithm literature review |
 | [`outputs/MOT16-03/tracking_report.md`](outputs/MOT16-03/tracking_report.md) | MOT16-03 demo report |
-#   C o m p u t e r - V i s i o n - P  
- 
+
