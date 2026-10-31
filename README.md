@@ -58,7 +58,9 @@ We also implemented **OSNet appearance embeddings** (feature gallery with cosine
 | MOT17-10-SDP (moving cam) | 66.05% | 47.58% | 304 | 528 | 3,527 |
 | MOT17-11-SDP (moving cam) | 70.18% | 65.37% | 85 | 192 | 2,537 |
 | MOT17-13-SDP (bus view) | 50.32% | 58.72% | 177 | 486 | 5,121 |
-| **Mean** | **65.35%** | **61.61%** | **654** | **1,311** | **22,947** |
+| **Mean (arithmetic, per-sequence)** | **65.35%** | **61.61%** | **654** | **1,311** | **22,947** |
+
+> **Note**: Mean is the arithmetic average of per-sequence metrics; sequences with more frames/objects are not weighted more heavily. These are MOT17 *training* sequences reserved as a held-out evaluation set — not the official MOT17 test split (which has no public ground truth).
 
 ### MOT16-03 Demo (Full Video)
 
@@ -76,7 +78,7 @@ We also implemented **OSNet appearance embeddings** (feature gallery with cosine
 |---|---|---|---|
 | Baseline (IoU-only, no Kalman) | 41.59% | 41.79% | 301 |
 | ByteTrack (IoU + Kalman + BYTE) | **42.35%** | **45.93%** | **205** |
-| HybridReID (IoU + Kalman + OSNet) | 34.78% | 29.14% | 460 |
+| HybridReID (IoU + Kalman + OSNet) | 40.86% | 29.14% | 460 |
 
 ---
 
@@ -101,7 +103,10 @@ pip install -r requirements.txt
 ```
 
 Key dependencies: `torch`, `torchvision`, `ultralytics`, `motmetrics`,
-`opencv-python`, `scipy`, `numpy`, `pandas`, `torchreid`.
+`opencv-python`, `scipy`, `numpy`, `pandas`.
+
+> **Note**: `torchreid` is required for the OSNet ReID module. Install via:
+> `pip install torchreid` (or `pip install git+https://github.com/KaiyangZhou/deep-person-reid.git` if PyPI version is unavailable). Not needed if only using ByteTrack (the default, recommended tracker).
 
 ### Run tracking with visualisation on MOT16-03.mp4
 

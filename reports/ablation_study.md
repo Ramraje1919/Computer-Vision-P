@@ -31,8 +31,8 @@ Evaluation was conducted across representative sequences from the sequence-level
 
 ## 3. Key Algorithmic Insights and Progression Analysis
 
-1. **Baseline Failure (Pure IoU + Hungarian)**: The baseline achieves poor MOTA (~24.6% on 02, ~62.3% on 09) and low IDF1 due to zero velocity estimation and a short 15-frame buffer. Over 1,200 ID switches occur as people walk past pillars.
-2. **ByteTrack Impact (+17.7% MOTA on 02)**: Recovering low-confidence detections ($D_{low}$) drastically reduces false negatives (FN), vaulting MOTA from 24.6% to 42.35% and cutting false positives by over 70%.
-3. **BoT-SORT KF Stability**: The direct $(cx, cy, w, h, vx, vy, vw, vh)$ state prevents bounding box aspect-ratio degradation, maintaining continuous tracks through dense clusters.
-4. **OSNet Deep ReID & Gallery Impact**: Introducing deep appearance embeddings with the multi-sample exemplar gallery and unoccluded-crop gating preserves identities across occlusion, significantly boosting IDF1 and reducing identity fragmentation.
-5. **Final Optimized Hybrid**: Balances motion gating and appearance similarity to produce the highest overall tracking accuracy, minimal ID switches, and robust occlusion recovery.
+1. **Baseline (IoU + Hungarian, public SDP dets)**: With public SDP detections, the baseline achieves MOTA=41.59% on MOT17-02. Without Kalman prediction, tracks fragment quickly under occlusion (301 IDSW). Note: Stage D baseline with YOLO11n detections scored 19.93% MOTA — the jump to 41.59% is due entirely to higher-quality public detections, not tracker improvements.
+2. **ByteTrack Impact (+0.76 pp MOTA, +4.14 pp IDF1 on MOT17-02)**: Two-stage BYTE association recovers low-confidence detections in a second matching round, reducing IDSW from 301 to 205 and boosting IDF1 from 41.79% to 45.93%. The Kalman filter enables motion prediction through short occlusion gaps.
+3. **BoT-SORT (identical to ByteTrack without CMC)**: With Camera Motion Compensation disabled (default for CPU), BoT-SORT produces identical results to ByteTrack. CMC is computationally expensive and only beneficial for moving-camera sequences.
+4. **OSNet Deep ReID — Negative Impact**: Contrary to expectations, adding OSNet-x0.25 appearance embeddings **degraded** performance. IDF1 dropped from 45.93% → 29.14% on MOT17-02, and IDSW increased from 205 → 460. The 128-D embeddings at x0.25 capacity cannot reliably discriminate similar-looking pedestrians in dense crowds.
+5. **Final Optimized Hybrid — Worst Configuration**: The fully-tuned hybrid tracker achieved the lowest MOTA (40.75%) and IDF1 (28.67%) on MOT17-02. This confirms that appearance features at this model capacity are a net negative on this dataset.

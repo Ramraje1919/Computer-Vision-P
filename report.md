@@ -62,17 +62,24 @@ structural validation — frame continuity, image integrity, and GT format check
 ## 3. Data Split Protocol
 
 Sequence-level splitting was applied to prevent data leakage: all detector variants of a
-scene are assigned to the same partition.
+scene are assigned to the same partition. No model training occurs — the tracker has no
+learned parameters. The "validation" split is used exclusively for ablation comparisons
+and hyperparameter selection.
+
+**Terminology**:
+- **Public detections** (`det/det.txt`): Pre-computed detector outputs shipped with MOT17 (DPM, FRCNN, SDP variants). These are the tracker's *input*.
+- **Ground-truth annotations** (`gt/gt.txt`): Hand-labeled bounding boxes for every visible pedestrian. These are the evaluation *reference*. Available only for MOT17 training sequences.
 
 | Split | Sequences | Purpose |
 |---|---|---|
-| **Training / ablation** | MOT17-02, 05, 09 (SDP) | Ablation study (Stage G) |
-| **Validation** | MOT17-02, 05, 09 (SDP) | Hyperparameter tuning (Stage H) |
-| **Held-out** | MOT17-04, 10, 11, 13 (SDP) | Final benchmark (Stage I) |
+| **Validation** (ablation + tuning) | MOT17-02, 05, 09 (SDP) | Ablation study (Stage G) + hyperparameter grid search (Stage H) |
+| **Held-out** (final benchmark) | MOT17-04, 10, 11, 13 (SDP) | Unbiased final evaluation (Stage I) — untouched during tuning |
 
-> **Note**: MOT17-02, 05, 09 double as both ablation and validation sequences —
-> they were never exposed during final model selection; held-out sequences were
-> strictly unseen until Stage I.
+> **Important**: All 7 sequences above come from the **MOT17 training partition**, which
+> has publicly available ground-truth annotations. They are NOT from the official MOT17
+> test split (MOT17-01, 03, 06, 07, 08, 12, 14), whose ground truth is held privately
+> on the MOTChallenge evaluation server. Our "held-out" split means sequences we
+> reserved from the training partition for unbiased evaluation — not the official test set.
 
 **Excluded**: `data/MOT16-03.mp4` — excluded from all metric computation throughout
 the project.
@@ -140,11 +147,32 @@ Detections
 The original baseline (preserved in `baseline/`) was a simple IoU tracker without
 Kalman filtering, confidence thresholding, or track lifecycle management.
 
-| Metric | Baseline | ByteTrack (tuned) | Improvement |
+### Stage D: Baseline with YOLO11n detector
+
+The original codebase used YOLO11n as its detector. Evaluated on MOT17-02-FRCNN:
+
+| Metric | Value |
+|---|---|
+| MOTA | 19.93% |
+| IDF1 | 30.34% |
+| IDSW | 217 |
+| Detector | YOLO11n (35.2% recall — the primary bottleneck) |
+
+### Stage G: Same baseline logic with public SDP detections
+
+When the same baseline tracker logic is fed higher-quality public MOT17 SDP detections
+(instead of YOLO11n), performance improves dramatically because detection recall increases:
+
+| Metric | Baseline (public SDP) | ByteTrack (public SDP) | Delta |
 |---|---|---|---|
-| MOTA (MOT17-02-SDP) | 19.93% | 54.79% (val mean) | +34.86 pp |
-| IDF1 (MOT17-02-SDP) | 30.34% | 57.66% (val mean) | +27.32 pp |
-| IDSW (MOT17-02-SDP) | 217 | ~205 | -12 |
+| MOTA (MOT17-02-SDP) | 41.59% | 42.35% | +0.76 pp |
+| IDF1 (MOT17-02-SDP) | 41.79% | 45.93% | +4.14 pp |
+| IDSW (MOT17-02-SDP) | 301 | 205 | −96 |
+
+> **Note**: The jump from 19.93% to 41.59% MOTA is due entirely to switching from
+> YOLO11n detections to public MOT17 SDP detections (higher recall). The fair
+> comparison of tracker architectures is within the ablation study (Section 7),
+> where the detector is held constant across all trackers.
 
 The baseline lacked: Kalman-predicted motion, two-stage confidence filtering,
 track lifecycle management (tentative/confirmed/lost states), and systematic
@@ -198,14 +226,15 @@ A per-track cooldown of 30 frames prevents duplicate counting on oscillating tra
 
 ## 7. Ablation Study
 
-Four tracker configurations were compared on validation sequences (MOT17-02-SDP, MOT17-09-SDP):
+Four tracker configurations were compared on validation sequences using public SDP
+detections (detector held constant to isolate tracker differences):
 
 | Tracker | MOTA (02) | IDF1 (02) | IDSW (02) | MOTA (09) | IDF1 (09) | IDSW (09) |
 |---|---|---|---|---|---|---|
 | Baseline (IoU only) | 41.59% | 41.79% | 301 | 63.00% | 52.90% | 59 |
 | ByteTrack | **42.35%** | **45.93%** | **205** | **63.23%** | **62.56%** | **24** |
 | BoT-SORT (no CMC) | 42.35% | 45.93% | 205 | 63.23% | 62.56% | 24 |
-| HybridReID (OSNet) | 34.78% | 29.14% | 460 | 61.88% | 44.20% | 89 |
+| HybridReID (OSNet) | 40.86% | 29.14% | 460 | 62.61% | 46.75% | 66 |
 
 **Key finding**: OSNet ReID degraded IDF1 from 45.93% → 29.14% on MOT17-02 (+255 IDSW).
 Appearance features are unreliable on CPU at `x0.25` capacity for dense homogeneous crowds.
@@ -238,7 +267,8 @@ Grid search over 12 configurations on validation sequences (MOT17-02, 05, 09 SDP
 
 ## 9. Held-Out Benchmark
 
-Tuned ByteTrack evaluated on the 4 held-out sequences (never seen during optimisation):
+Tuned ByteTrack evaluated on the 4 held-out sequences (reserved from the MOT17 training
+partition — never seen during hyperparameter optimisation):
 
 | Sequence | Scene | MOTA | IDF1 | IDSW | FP | FN |
 |---|---|---|---|---|---|---|
@@ -246,7 +276,11 @@ Tuned ByteTrack evaluated on the 4 held-out sequences (never seen during optimis
 | MOT17-10-SDP | Moving cam, night | 66.05% | 47.58% | 304 | 528 | 3,527 |
 | MOT17-11-SDP | Moving cam, mall | 70.18% | 65.37% | 85 | 192 | 2,537 |
 | MOT17-13-SDP | Bus perspective | 50.32% | 58.72% | 177 | 486 | 5,121 |
-| **Mean** | | **65.35%** | **61.61%** | 654 | 1,311 | 22,947 |
+| **Mean (arithmetic, per-sequence)** | | **65.35%** | **61.61%** | 654 | 1,311 | 22,947 |
+
+> Mean is the arithmetic average of per-sequence MOTA and IDF1. IDSW, FP, and FN are
+> summed across sequences. The evaluator computes metrics per-sequence; no cross-sequence
+> pooled accumulator is used.
 
 ### Comparison: Validation vs Held-Out
 
